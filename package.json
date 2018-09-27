@@ -4,7 +4,6 @@
   "description": "zfort-tp",
   "main": "index.js",
   "scripts": {
-    "start": "export URL_HOST=skydot-front.yalantis.com && node ./api/app",
     "dev": "./scripts/boot/dev.sh",
     "nodemon": "./scripts/boot/nodemon.sh",
     "staging": "./scripts/boot/staging.sh",
