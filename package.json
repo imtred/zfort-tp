@@ -1,0 +1,71 @@
+{
+  "name": "zfort-tp",
+  "version": "1.0.0",
+  "description": "zfort-tp",
+  "main": "index.js",
+  "scripts": {
+    "start": "export URL_HOST=skydot-front.yalantis.com && node ./api/app",
+    "dev": "./scripts/boot/dev.sh",
+    "nodemon": "./scripts/boot/nodemon.sh",
+    "staging": "./scripts/boot/staging.sh",
+    "create-db": "node ./migrations/scripts/create-db.js",
+    "db-migrate-create": "sequelize migration:create --name [new_migration_name]",
+    "db-migrate-up": "sequelize db:migrate",
+    "db-migrate-down": "sequelize db:migrate:undo",
+    "db-migrate-down-all": "sequelize db:migrate:undo:all",
+    "test": "./scripts/boot/test.sh",
+    "test-auth": "npm run test test/auth-test.js",
+    "test-users": "npm run test test/auth-test.js"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "bcrypt": "^1.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "~1.18.2",
+    "chalk": "^2.4.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-http-proxy": "^1.1.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.0.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.2.0",
+    "lodash": "^4.17.5",
+    "mailgun-js": "^0.16.0",
+    "moment": "^2.21.0",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.1",
+    "rand-token": "^0.4.0",
+    "secure-random-string": "^1.1.0",
+    "sequelize": "^4.37.0",
+    "sequelize-cli": "^4.0.0",
+    "serve-favicon": "~2.4.5",
+    "winston": "^2.4.1",
+    "winston-daily-rotate-file": "^3.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "nodemon": "^1.15.1",
+    "prettier": "^1.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imtred/zfort-tp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imtred/zfort-tp/issues"
+  },
+  "homepage": "https://github.com/imtred/zfort-tp#readme"
+}
